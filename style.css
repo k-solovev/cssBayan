@@ -1,3 +1,57 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
 body {
-    background-color: green;
+    background-color: #f6f6ec;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.main-title {
+    font-size: 2em;
+    line-height: 2.5;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+.accordion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.meme {
+    border-bottom: 1px solid #e3e7e7;
+}
+.label__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+.meme__input {
+    display: none;
+}
+.meme__img {
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: 0;
+}
+.meme__input:checked + label .plus {
+    transform: rotate(45deg);
+}
+.meme__input:checked + label .meme__img,
+.meme:hover .meme__img {
+    overflow: visible;
+    max-height: 100000px;
+}
+.plus {
+    font-size: 1.5em;
+    line-height: 2em;
+    font-weight: 700;
+}
+.accordion {
+    width: 100%;
 }
