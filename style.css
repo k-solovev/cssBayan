@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body {
+    font-family: sans-serif;
     background-color: #f6f6ec;
 }
 .container {
@@ -27,7 +28,8 @@ body {
 .label__wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 1em 0;
+    padding: 0;
+    cursor: pointer;
 }
 .meme__input {
     display: none;
@@ -39,7 +41,8 @@ body {
     overflow: hidden;
     max-height: 0;
 }
-.meme__input:checked + label .plus {
+.meme__input:checked + label .plus,
+.meme:hover .plus {
     transform: rotate(45deg);
 }
 .meme__input:checked + label .meme__img,
@@ -54,4 +57,6 @@ body {
 }
 .accordion {
     width: 100%;
+    font-size: 2em;
+    font-weight: 700;
 }
