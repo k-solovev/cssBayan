@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #f6f6ec;
 }
+p {
+    margin: 0;
+}
 .container {
-    max-width: 800px;
+    max-width: 60%;
     margin: 0 auto;
 }
 .main-title {
@@ -27,8 +30,9 @@ body {
 }
 .label__wrapper {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 0;
+    padding: 10px 0;
     cursor: pointer;
 }
 .meme__input {
@@ -49,9 +53,10 @@ body {
 .meme:hover .meme__img {
     overflow: visible;
     max-height: 100000px;
+    margin-bottom: 20px;
 }
 .plus {
-    font-size: 1.5em;
+    font-size: .7em;
     line-height: 2em;
     font-weight: 700;
 }
@@ -64,3 +69,6 @@ body {
 /* Реализуйте адаптивный дизайн с тремя контрольными точками. Аккордеон корректно отображается на мобильных 320х568, планшетных 820х1180, десктопных 1920х1080; */
 /* Плавные переходы применяются для смены мемов и смены иконки; */
 /* Размер шрифта должен быть изменен на каждом устройстве (мобильном, планшете, компьютере) */
+/* Когда решение будет готово - откройте Pull Request из ветки gh-pages в основную ветку. Имя запроса на слияние должно совпадать с именем задачи.
+Описание запроса на слияние должно соответствовать руководству. НЕ объединяйте этот запрос на слияние.
+Ссылка на этот запрос на слияние должна быть отправлена ​​в форму перекрестной проверки. Пулл-реквест должен содержать полное описание — что было сделано, а что пропущено. */
