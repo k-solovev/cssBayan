@@ -6,27 +6,34 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f6f6ec;
+    overflow-x: hidden;
 }
 p {
-    margin: 0;
+    margin: 10px 0;
+    font-size: 1em;
 }
 .container {
-    max-width: 60%;
+    width: 100%;
     margin: 0 auto;
 }
 .main-title {
-    font-size: 2em;
-    line-height: 2.5;
+    font-size: 1.5em;
+    line-height: 2em;
     margin: 0;
     border-bottom: 1px solid black;
 }
 .accordion {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 1em;
 }
 .meme {
     border-bottom: 1px solid #e3e7e7;
+}
+.meme__input {
+    display: none;
 }
 .label__wrapper {
     display: flex;
@@ -35,11 +42,9 @@ p {
     padding: 10px 0;
     cursor: pointer;
 }
-.meme__input {
-    display: none;
-}
 .meme__img {
     display: block;
+    width: 100%;
     max-width: 400px;
     margin: 0 auto;
     overflow: hidden;
@@ -56,17 +61,42 @@ p {
     margin-bottom: 20px;
 }
 .plus {
-    font-size: .7em;
+    font-size: 1em;
     line-height: 2em;
     font-weight: 700;
 }
-.accordion {
-    width: 100%;
-    font-size: 2em;
-    font-weight: 700;
+
+@media (min-width: 820px) {
+    .main-title {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    .plus {
+        font-size: 1.5em;
+    }
 }
 
-/* Реализуйте адаптивный дизайн с тремя контрольными точками. Аккордеон корректно отображается на мобильных 320х568, планшетных 820х1180, десктопных 1920х1080; */
+@media (min-width: 1180px) {
+    p {
+        font-size: 1em;
+    }
+    .container {
+        max-width: 60%;
+    }
+    .main-title {
+        font-size: 2.5em;
+    }
+    .plus {
+        font-size: .7em;
+    }
+    .accordion {
+        font-size: 2em;
+        font-weight: 700;
+    }
+}
+
 /* Плавные переходы применяются для смены мемов и смены иконки; */
 /* Размер шрифта должен быть изменен на каждом устройстве (мобильном, планшете, компьютере) */
 /* Когда решение будет готово - откройте Pull Request из ветки gh-pages в основную ветку. Имя запроса на слияние должно совпадать с именем задачи.
